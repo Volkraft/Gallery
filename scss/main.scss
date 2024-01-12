@@ -2,14 +2,12 @@
 
 @import './base/vars';
 @import './base/reset';
+@import './base/base';
 
 // blocks
+@import './blocks/list-button';
 
 // sections
 @import './sections/header';
 
-
-// other sections
-
-@import './sections/footer';
 

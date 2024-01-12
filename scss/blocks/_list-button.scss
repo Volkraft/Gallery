@@ -1,0 +1,33 @@
+.list-button {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    &__item{
+    
+    }
+
+}
+
+.key {
+    padding: 3px 7px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    background-color: $buttonColor;
+    border-radius: 20px;
+
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 500;
+
+    &__title{
+        
+    }
+
+    &__img{
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+    }
+}
