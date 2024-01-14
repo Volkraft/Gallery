@@ -1,0 +1,25 @@
+.form {
+    position: relative;
+
+}
+
+.form__search {
+    background-color: $buttonColor;
+    border-radius: 15px;
+    padding: 10px 40px 10px 5px;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.form__submit {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
