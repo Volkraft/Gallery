@@ -242,6 +242,7 @@ body {
        column-gap: 5px;
   background-color: #BBCBCB;
   border-radius: 20px;
+  border: 2px solid transparent;
   font-family: monospace;
   font-size: 20px;
   font-weight: 500;
@@ -250,6 +251,16 @@ body {
   vertical-align: middle;
   width: 40px;
   height: 40px;
+}
+.key:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+@media (hover: hover) {
+  .key:hover {
+    border-color: rgb(27, 122, 247);
+    box-shadow: 0 0 5px rgb(27, 122, 247);
+  }
 }
 
 .header {
