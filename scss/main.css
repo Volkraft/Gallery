@@ -300,6 +300,27 @@ body {
   background-position: center;
 }
 
+.row-cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.row-cards__card {
+  overflow: hidden;
+  max-width: 320px;
+  width: 100%;
+  height: 380px;
+}
+.row-cards__card .row-cards__img {
+  transition: 0.5s;
+}
+.row-cards__card:hover .row-cards__img {
+  transform: scale(1.1);
+}
+
 .header {
   padding: 20px 0;
   background-color: #2E4057;

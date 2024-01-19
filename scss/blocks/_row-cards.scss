@@ -1,0 +1,24 @@
+.row-cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.row-cards__card {
+    overflow: hidden;
+    max-width: 320px;
+    width: 100%;
+    height: 380px;
+    
+    .row-cards__img{
+        transition: 0.5s;
+    }
+    
+    &:hover {
+        .row-cards__img{
+            transform: scale(1.1);
+        }
+    }
+}
