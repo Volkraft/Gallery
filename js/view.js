@@ -9,6 +9,7 @@ export default class View {
         listCards: document.querySelector('.row-cards'),
         card: document.querySelectorAll('.row-cards__img'),
         wrapperCard: document.querySelectorAll('.row-cards__card'),
+        buttonRequest: document.querySelectorAll('.key'),
     }
 
     renderPhotoes = (photos) => {
@@ -23,7 +24,6 @@ export default class View {
     deleteCard = () => {
         this.elementControll.wrapperCard = document.querySelectorAll('.row-cards__card');
         if (this.elementControll.wrapperCard.length > 0){
-            console.log(this.elementControll.card);
             this.elementControll.wrapperCard.forEach(card => {
                 card.remove();
             }) 

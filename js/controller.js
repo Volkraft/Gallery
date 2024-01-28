@@ -4,6 +4,7 @@ import View from "./view.js";
 const model = new Model();
 const view = new View();
 const basicValue = view.elementControll.inputSearch.value;
+
 const startGallery = async (e) => {
     e.preventDefault();
     
@@ -14,5 +15,12 @@ const startGallery = async (e) => {
         view.renderPhotoes(arrayPhotoes)
     }
 }
+view.elementControll.buttonRequest.forEach((btn) => {
+    btn.addEventListener('click', async() => {
+        view.elementControll.inputSearch.value = btn.dataset.action;
+        view.renderPhotoes( await model.request(view.elementControll.inputSearch.value));
+    })
+})
+
 view.renderPhotoes(await model.request(basicValue));
 view.elementControll.form.addEventListener('submit', startGallery)
