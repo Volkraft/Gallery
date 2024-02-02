@@ -259,6 +259,9 @@ body {
     padding-top: 90px;
     background-color: #243b58;
   }
+  .list-button.open {
+    left: 0;
+  }
 }
 
 .key {

@@ -18,6 +18,10 @@
         width: 50%;
         padding-top: 90px;
         background-color: $burgerMenuColor;
+
+        &.open{
+            left: 0;
+        }
     }
 
 }

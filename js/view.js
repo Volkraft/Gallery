@@ -10,6 +10,8 @@ export default class View {
         card: document.querySelectorAll('.row-cards__img'),
         wrapperCard: document.querySelectorAll('.row-cards__card'),
         buttonRequest: document.querySelectorAll('.key'),
+        listButton: document.querySelector('.list-button'),
+        burger: document.querySelector('.burger'),
     }
 
     renderPhotoes = (photos) => {
@@ -28,6 +30,9 @@ export default class View {
                 card.remove();
             }) 
         }
+    }
+    mobileMenu = () => {
+        this.elementControll.listButton.classList.toggle('open');
     }
 }
 // console.log(photo.urls.regular);

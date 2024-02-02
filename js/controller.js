@@ -22,5 +22,6 @@ view.elementControll.buttonRequest.forEach((btn) => {
     })
 })
 
+view.elementControll.burger.addEventListener('click', view.mobileMenu)
 view.renderPhotoes(await model.request(basicValue));
 view.elementControll.form.addEventListener('submit', startGallery)
