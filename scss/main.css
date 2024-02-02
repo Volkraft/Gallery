@@ -246,6 +246,21 @@ body {
   flex-wrap: wrap;
   max-width: 60%;
 }
+@media (max-width: 768px) {
+  .list-button {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: left 0.5s;
+    width: 50%;
+    padding-top: 90px;
+    background-color: #243b58;
+  }
+}
+
 .key {
   padding: 3px 7px;
   display: flex;
@@ -305,7 +320,12 @@ body {
   gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0;
+  padding: 300px 0;
+}
+@media (max-width: 768px) {
+  .row-cards {
+    padding: 120px 0;
+  }
 }
 
 .row-cards__card {
@@ -326,9 +346,55 @@ body {
   transform: scale(1.1);
 }
 
+.burger {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border: 3px solid white;
+  border-radius: 10px;
+  z-index: 2;
+  display: none;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+}
+
+.burger-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  border-radius: 25px;
+}
+.burger-line::before, .burger-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  border-radius: 25px;
+}
+.burger-line::before {
+  top: -10px;
+}
+.burger-line::after {
+  bottom: -10px;
+}
+
 .header {
   padding: 20px 0;
   background-color: #2E4057;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .header__content {
   display: flex;
