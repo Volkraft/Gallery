@@ -33,6 +33,7 @@ export default class View {
     }
     mobileMenu = () => {
         this.elementControll.listButton.classList.toggle('open');
+        this.elementControll.burger.classList.toggle('active');
     }
 }
 // console.log(photo.urls.regular);

@@ -362,6 +362,20 @@ body {
   .burger {
     display: block;
   }
+  .burger.active .burger-line {
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.5s 0s;
+  }
+  .burger.active .burger-line::before {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 0.5s, transform 0.5s 0.5s;
+  }
+  .burger.active .burger-line::after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top 0.5s, transform 0.5s 0.5s;
+  }
 }
 
 .burger-line {
@@ -374,6 +388,7 @@ body {
   height: 3px;
   background-color: white;
   border-radius: 25px;
+  transition: background-color 0s 0.5s;
 }
 .burger-line::before, .burger-line::after {
   content: "";
@@ -386,9 +401,11 @@ body {
 }
 .burger-line::before {
   top: -10px;
+  transition: top 0.5s 0.5s, transform 0.5s;
 }
 .burger-line::after {
-  bottom: -10px;
+  top: 10px;
+  transition: top 0.5s 0.5s, transform 0.5s;
 }
 
 .header {
